@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 import pexpect
 import sys
 
-child = pexpect.spawnu('ftp ftp.openbsd.org')
+child = pexpect.spawn('ftp ftp.openbsd.org')
 child.expect('(?i)name .*: ')
 child.sendline('anonymous')
 child.expect('(?i)password')
